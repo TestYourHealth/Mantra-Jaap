@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mantra Chanting App - Spiritual Design System */
+
+@layer base {
+  :root {
+    /* Saffron/Orange Spiritual Theme */
+    --background: 30 100% 98%;
+    --foreground: 20 80% 15%;
+
+    --card: 30 60% 97%;
+    --card-foreground: 20 80% 15%;
+
+    --popover: 30 60% 97%;
+    --popover-foreground: 20 80% 15%;
+
+    /* Saffron Orange Primary */
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Warm Cream Secondary */
+    --secondary: 35 60% 94%;
+    --secondary-foreground: 20 80% 20%;
+
+    --muted: 30 30% 92%;
+    --muted-foreground: 20 30% 45%;
+
+    /* Golden Accent */
+    --accent: 43 96% 56%;
+    --accent-foreground: 20 80% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 40% 88%;
+    --input: 30 40% 88%;
+    --ring: 24 95% 53%;
+
+    --radius: 0.75rem;
+
+    /* Custom Spiritual Colors */
+    --saffron: 24 95% 53%;
+    --saffron-light: 30 100% 70%;
+    --saffron-dark: 20 90% 40%;
+    --gold: 43 96% 56%;
+    --gold-light: 45 100% 75%;
+    --maroon: 0 60% 25%;
+    --maroon-light: 0 50% 35%;
+    --cream: 35 60% 96%;
+    --temple-red: 0 70% 45%;
+
+    /* Gradients */
+    --gradient-saffron: linear-gradient(135deg, hsl(24, 95%, 53%) 0%, hsl(35, 100%, 60%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(43, 96%, 56%) 0%, hsl(35, 90%, 65%) 100%);
+    --gradient-spiritual: linear-gradient(180deg, hsl(30, 100%, 98%) 0%, hsl(35, 60%, 94%) 100%);
+
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(24 95% 53% / 0.3);
+    --shadow-gold: 0 0 30px hsl(43 96% 56% / 0.4);
+    --shadow-soft: 0 4px 20px hsl(20 80% 15% / 0.08);
+
+    --sidebar-background: 35 60% 96%;
+    --sidebar-foreground: 20 80% 15%;
+    --sidebar-primary: 24 95% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 60% 92%;
+    --sidebar-accent-foreground: 20 80% 15%;
+    --sidebar-border: 30 40% 88%;
+    --sidebar-ring: 24 95% 53%;
+  }
+
+  .dark {
+    /* Deep Maroon/Purple Dark Theme */
+    --background: 0 40% 8%;
+    --foreground: 35 60% 95%;
+
+    --card: 0 35% 12%;
+    --card-foreground: 35 60% 95%;
+
+    --popover: 0 35% 12%;
+    --popover-foreground: 35 60% 95%;
+
+    /* Golden Primary in Dark Mode */
+    --primary: 43 96% 56%;
+    --primary-foreground: 0 40% 8%;
+
+    --secondary: 0 30% 18%;
+    --secondary-foreground: 35 60% 95%;
+
+    --muted: 0 25% 20%;
+    --muted-foreground: 35 30% 65%;
+
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 25% 22%;
+    --input: 0 25% 22%;
+    --ring: 43 96% 56%;
+
+    /* Dark Theme Custom Colors */
+    --saffron: 24 95% 53%;
+    --saffron-light: 30 90% 65%;
+    --saffron-dark: 20 85% 45%;
+    --gold: 43 96% 56%;
+    --gold-light: 45 90% 70%;
+    --maroon: 0 40% 8%;
+    --maroon-light: 0 35% 15%;
+    --cream: 35 40% 90%;
+    --temple-red: 0 60% 50%;
+
+    /* Dark Gradients */
+    --gradient-saffron: linear-gradient(135deg, hsl(24, 85%, 45%) 0%, hsl(35, 90%, 55%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(43, 96%, 56%) 0%, hsl(35, 85%, 60%) 100%);
+    --gradient-spiritual: linear-gradient(180deg, hsl(0, 40%, 8%) 0%, hsl(0, 35%, 12%) 100%);
+
+    /* Dark Shadows */
+    --shadow-glow: 0 0 50px hsl(43 96% 56% / 0.25);
+    --shadow-gold: 0 0 40px hsl(43 96% 56% / 0.35);
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
+
+    --sidebar-background: 0 35% 10%;
+    --sidebar-foreground: 35 60% 95%;
+    --sidebar-primary: 43 96% 56%;
+    --sidebar-primary-foreground: 0 40% 8%;
+    --sidebar-accent: 0 30% 15%;
+    --sidebar-accent-foreground: 35 60% 95%;
+    --sidebar-border: 0 25% 22%;
+    --sidebar-ring: 43 96% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .font-devanagari {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+  }
+}
+
+@layer components {
+  /* Mandala Background Pattern */
+  .mandala-bg {
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsl(var(--saffron) / 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--gold) / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, hsl(var(--saffron) / 0.02) 0%, transparent 70%);
+  }
+
+  .dark .mandala-bg {
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsl(var(--gold) / 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--saffron) / 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, hsl(var(--gold) / 0.04) 0%, transparent 70%);
+  }
+
+  /* Glowing Effects */
+  .glow-saffron {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  /* Counter Ring Styles */
+  .counter-ring {
+    filter: drop-shadow(0 0 20px hsl(var(--saffron) / 0.4));
+  }
+
+  .counter-ring-complete {
+    filter: drop-shadow(0 0 40px hsl(var(--gold) / 0.6));
+  }
+
+  /* Spiritual Button */
+  .btn-spiritual {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-full font-medium;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:scale-105 active:scale-95;
+    box-shadow: 0 4px 15px hsl(var(--primary) / 0.3);
+  }
+
+  .btn-spiritual:hover {
+    box-shadow: 0 6px 25px hsl(var(--primary) / 0.4);
+  }
+
+  /* Card Spiritual */
+  .card-spiritual {
+    @apply bg-card rounded-2xl p-4 border border-border/50;
+    box-shadow: var(--shadow-soft);
+    @apply transition-all duration-300;
+  }
+
+  .card-spiritual:hover {
+    @apply scale-[1.02];
+    box-shadow: 0 8px 30px hsl(var(--primary) / 0.15);
+  }
+}
+
+@layer utilities {
+  /* Animations */
+  @keyframes pulse-glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 20px hsl(var(--gold) / 0.4));
+    }
+    50% {
+      filter: drop-shadow(0 0 40px hsl(var(--gold) / 0.7));
+    }
+  }
+
+  @keyframes count-pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes complete-celebration {
+    0% { transform: scale(1); filter: drop-shadow(0 0 20px hsl(var(--gold) / 0.4)); }
+    25% { transform: scale(1.05); filter: drop-shadow(0 0 40px hsl(var(--gold) / 0.7)); }
+    50% { transform: scale(1.08); filter: drop-shadow(0 0 60px hsl(var(--gold) / 0.9)); }
+    75% { transform: scale(1.05); filter: drop-shadow(0 0 40px hsl(var(--gold) / 0.7)); }
+    100% { transform: scale(1); filter: drop-shadow(0 0 20px hsl(var(--gold) / 0.4)); }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-count-pop {
+    animation: count-pop 0.3s ease-out;
+  }
+
+  .animate-complete {
+    animation: complete-celebration 1.5s ease-in-out;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.5s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}

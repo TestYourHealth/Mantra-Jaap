@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no, maximum-scale=1" />
+    
+    <!-- App Meta -->
+    <title>Mantra Jaap </title>
+    <meta name="description" content="A beautiful mantra chanting app with 60+ sacred mantras, 108-count tracking, ambient music, and spiritual themes. Perfect for daily japa meditation." />
+    <meta name="keywords" content="mantra, chanting, japa, meditation, 108, hindu, spiritual, om, prayer, counter" />
+    
+    <!-- Mobile App Meta -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Mantra Japa" />
+    <meta name="application-name" content="Mantra Japa" />
+    <meta name="theme-color" content="#FF6B00" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#4A1942" media="(prefers-color-scheme: dark)" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mantra Japa - 108 Chanting Counter" />
+    <meta property="og:description" content="A beautiful mantra chanting app with 60+ sacred mantras and ambient music for daily japa meditation." />
+    <meta property="og:type" content="website" />
+    
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Safe Area CSS Variables -->
+    <style>
+      :root {
+        --sat: env(safe-area-inset-top);
+        --sar: env(safe-area-inset-right);
+        --sab: env(safe-area-inset-bottom);
+        --sal: env(safe-area-inset-left);
+      }
+      
+      .pt-safe { padding-top: max(1rem, var(--sat)); }
+      .pb-safe { padding-bottom: max(1rem, var(--sab)); }
+      .safe-area-pb { padding-bottom: calc(0.5rem + var(--sab)); }
+      
+      /* Prevent overscroll bounce on iOS */
+      html, body {
+        overscroll-behavior: none;
+        -webkit-overflow-scrolling: touch;
+      }
+      
+      /* Prevent text selection on tap */
+      * {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

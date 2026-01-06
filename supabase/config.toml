@@ -1,0 +1,4 @@
+project_id = "tawkkrjxeqanayvuhgsc"
+
+[functions.generate-ambient-music]
+verify_jwt = false
